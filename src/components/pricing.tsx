@@ -43,7 +43,7 @@ export function Pricing() {
       <div className="container mx-auto max-w-7xl px-4">
         <h2 className="text-fluid-4xl font-bold font-display text-center">Våra abonnemang</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 md:mt-20">
           {pricing.map((item) => (
             <div key={item.name} className={cn("bg-card rounded-xl p-10 flex flex-col justify-between", item.featured && "bg-secondary text-secondary-foreground")}>
               <h3 className="text-fluid-lg">{item.name}</h3>

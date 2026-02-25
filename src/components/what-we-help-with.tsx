@@ -33,7 +33,7 @@ export function WhatWeHelpWith() {
       <div className="container mx-auto max-w-7xl px-4">
         <h2 className="text-fluid-4xl font-bold font-display text-center">Det vi hjälper till med</h2>
 
-        <div className="grid grid-cols-1 gap-4 mt-20">
+        <div className="grid grid-cols-1 gap-4 mt-10 md:mt-20">
           {SERVICES.map((service, index) => (
             <div key={service.title} className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {index % 2 === 0 ? (

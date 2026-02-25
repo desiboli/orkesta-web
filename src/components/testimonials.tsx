@@ -5,7 +5,7 @@ export function Testimonials() {
         <h2 className="text-fluid-4xl font-bold font-display text-center">Därför väljer svenska
           bolag oss</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20">
           <div className="flex flex-col gap-10 col-span-1">
             <p className="text-fluid-xl font-semibold">Orkesta Studio hjälpte oss modernisera vår digitala närvaro och effektivisera interna processer. Resultatet märktes direkt.</p>
 
