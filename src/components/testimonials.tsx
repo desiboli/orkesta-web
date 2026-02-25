@@ -10,10 +10,10 @@ export function Testimonials() {
             <p className="text-fluid-xl font-semibold">Orkesta Studio hjälpte oss modernisera vår digitala närvaro och effektivisera interna processer. Resultatet märktes direkt.</p>
 
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground text-center leading-10 text-fluid-sm font-medium">EL</div>
+              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground text-center leading-10 text-fluid-sm font-medium">GB</div>
               <div className="flex flex-col">
-                <p className="font-medium">Erik Lydecker</p>
-                <p className="text-sm font-light">CEO Orkesta</p>
+                <p className="font-medium">Gustav Berglund</p>
+                <p className="text-sm font-light">CEO Berglund AB</p>
               </div>
             </div>
           </div>
