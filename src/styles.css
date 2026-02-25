@@ -141,6 +141,6 @@
   }
 
   section:not(:first-child) {
-    @apply pt-48;
+    @apply pt-20 md:pt-48;
   }
 }
