@@ -10,14 +10,12 @@ function ShaderGradientBlock({
 }) {
   return (
     <div className="col-span-1 order-2 md:order-0 relative h-[250px] md:h-[400px] rounded-xl overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <ShaderGradientCanvas className="size-full pointer-events-none">
-          <ShaderGradient {...shaderProps} />
-        </ShaderGradientCanvas>
-      </div>
+      <ShaderGradientCanvas className="absolute inset-0">
+        <ShaderGradient {...shaderProps} />
+      </ShaderGradientCanvas>
       {label && (
         <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-          <span className="text-white text-2xl font-bold">{label}</span>
+          <span className="text-white text-shadow-lg text-2xl font-bold">{label}</span>
         </div>
       )}
     </div>
