@@ -6,7 +6,7 @@ export function Testimonials() {
           bolag oss</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20">
-          <div className="flex flex-col gap-10 col-span-1">
+          <div className="flex flex-col md:gap-10 gap-4 col-span-1">
             <p className="text-fluid-xl font-semibold">Orkesta Studio hjälpte oss modernisera vår digitala närvaro och effektivisera interna processer. Resultatet märktes direkt.</p>
 
             <div className="flex items-center gap-2">
@@ -17,7 +17,7 @@ export function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-10 col-span-1">
+          <div className="flex flex-col md:gap-10 gap-4 col-span-1">
             <p className="text-fluid-xl font-semibold">Snabbt, tydligt och inga oändliga möten.</p>
 
             <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ export function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-10 col-span-1 md:col-start-2">
+          <div className="flex flex-col md:gap-10 gap-4 col-span-1 md:col-start-2">
             <p className="text-fluid-xl font-semibold">Äntligen raka priser och AI som faktiskt fungerar.</p>
 
             <div className="flex items-center gap-2">

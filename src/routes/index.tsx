@@ -69,8 +69,8 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col w-full items-stretch mask-b-from-0% container-type-inline-size mt-20">
-          <h3 className="font-black tracking-tight leading-none text-[clamp(4rem,15cqw,24rem)] uppercase font-display text-foreground text-center">Orkesta®</h3>
+        <div className="flex flex-col w-full items-stretch mask-b-from-0% container-type-inline-size mt-20 overflow-hidden">
+          <h3 className="font-black tracking-tight leading-none text-[clamp(5rem,10vw+1rem,22rem)] uppercase font-display text-foreground text-center">Orkesta®</h3>
         </div>
       </footer>
     </main>
