@@ -4,11 +4,11 @@ export function ClientLogos() {
       <h2 className="text-sm text-center text-foreground/70">Företag vi har arbetat med</h2>
 
       <div className="flex flex-wrap items-center justify-center gap-20 mt-10">
-        <img src="/clients/logoipsum-360.svg" className="w-fit h-12 grayscale" alt="Client Logo 1" />
-        <img src="/clients/logoipsum-391.svg" className="w-fit h-12 grayscale" alt="Client Logo 2" />
-        <img src="/clients/logoipsum-414.svg" className="w-fit h-12 grayscale" alt="Client Logo 3" />
-        <img src="/clients/logoipsum-416.svg" className="w-fit h-12 grayscale" alt="Client Logo 4" />
-        <img src="/clients/logoipsum-418.svg" className="w-fit h-12 grayscale" alt="Client Logo 5" />
+        <img src="/clients/assessio.svg" className="w-fit h-12 saturate-50" alt="Client Logo 1" />
+        <img src="/clients/redeye.svg" className="w-fit h-12 saturate-50" alt="Client Logo 2" />
+        <img src="/clients/regeringskansliet.svg" className="w-fit h-12 saturate-50" alt="Client Logo 3" />
+        <img src="/clients/sida.svg" className="w-fit h-12 saturate-50" alt="Client Logo 4" />
+        <img src="/clients/svt.svg" className="w-fit h-14 saturate-50" alt="Client Logo 5" />
       </div>
     </div>
   )
