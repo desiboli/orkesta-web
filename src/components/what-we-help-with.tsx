@@ -1,5 +1,6 @@
 import { ShaderGradient, ShaderGradientCanvas } from "@shadergradient/react";
-import { SERVICES } from "@/constants/services";
+import { getServices } from "@/constants/services";
+import * as m from "@/paraglide/messages";
 
 function ShaderGradientBlock({
   shaderProps,
@@ -37,11 +38,11 @@ export function WhatWeHelpWith() {
     <section id="services">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col gap-4 max-w-4xl mx-auto">
-          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Det vi hjälper till med</h2>
+          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">{m.services_heading()}</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-20 mt-10 md:mt-20">
-          {SERVICES.map((service, index) => (
+          {getServices().map((service, index) => (
             <div key={service.title} className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {index % 2 === 0 ? (
                 <>

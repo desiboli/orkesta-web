@@ -2,61 +2,50 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { AppHeader } from '@/components/app-header'
+import * as m from '@/paraglide/messages'
+import { getLocale } from '@/paraglide/runtime'
+import { localizeHref } from '@/paraglide/runtime'
 
 import appCss from '../styles.css?url'
 
+const SITE_URL = import.meta.env.PUBLIC_SITE_URL ?? 'https://orkesta.se'
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Orkesta - Modern webbdesign och AI utan krångel',
-      },
-      // Open Graph
-      { property: 'og:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
-      { property: 'og:description', content: 'Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!' },
-      { property: 'og:image', content: '/og.png' },
-      { property: 'og:type', content: 'article' },
-      // Twitter Card
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
-      { name: 'twitter:description', content: 'Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!' },
-      { name: 'twitter:image', content: '/og.png' },
-    ],
-    links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
-      {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/favicon-apple.png',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: '/favicon.png',
-      },
-      // { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
-      { rel: 'icon', href: '/favicon.ico' },
-    ],
-  }),
+  head: () => {
+    const title = m.meta_title()
+    const description = m.meta_description()
+    return {
+      meta: [
+        { charSet: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { title },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:image', content: '/og.png' },
+        { property: 'og:type', content: 'article' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: '/og.png' },
+      ],
+      links: [
+        { rel: 'stylesheet', href: appCss },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-apple.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
+        { rel: 'icon', href: '/favicon.ico' },
+        { rel: 'alternate', hreflang: 'sv', href: `${SITE_URL}${localizeHref('/', { locale: 'sv' })}` },
+        { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}${localizeHref('/', { locale: 'en' })}` },
+        { rel: 'alternate', hreflang: 'x-default', href: SITE_URL },
+      ],
+    }
+  },
 
   shellComponent: RootDocument,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang={getLocale()}>
       <head>
         <HeadContent />
       </head>
