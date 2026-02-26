@@ -36,7 +36,9 @@ export function WhatWeHelpWith() {
   return (
     <section>
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-fluid-4xl font-bold font-display text-center">Det vi hjälper till med</h2>
+        <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Det vi hjälper till med</h2>
+        </div>
 
         <div className="grid grid-cols-1 gap-20 mt-10 md:mt-20">
           {SERVICES.map((service, index) => (

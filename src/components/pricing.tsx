@@ -44,11 +44,9 @@ export function Pricing() {
   return (
     <section>
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
-          <h2 className="text-fluid-4xl font-bold font-display text-center">Våra abonnemang</h2>
-          <h3 className="text-fluid-xl text-center leading-tight">Månadspris – transparent och förutsägbart.
-            Inga timrapporter. Inga minimimånader. Uppsägning när du vill (30 dagars varsel).
-            Du betalar bara för det du använder – vi tar risken.</h3>
+        <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Våra abonnemang</h2>
+          <h3 className="text-fluid-xl text-center leading-tight">Välj rätt nivå för er webbdesign, AI-integration eller löpande optimering. Allt ingår i ett fast månadspris – ingen timrapportering. Perfekt för bolag som vill ha modern webbutveckling utan dolda kostnader.</h3>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 md:mt-20">

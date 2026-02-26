@@ -2,8 +2,11 @@ export function Testimonials() {
   return (
     <section>
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-fluid-4xl font-bold font-display text-center">Därför väljer svenska
-          bolag oss</h2>
+        <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Därför väljer svenska
+            <br />
+            bolag oss</h2>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20">
           <div className="flex flex-col md:gap-10 gap-4 col-span-1">
