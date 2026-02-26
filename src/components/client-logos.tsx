@@ -7,6 +7,7 @@ export function ClientLogos() {
 
       <Marquee className="mt-10" speed="slow" gap="80px" fade autoFill pauseOnHover>
         <img src="/clients/assessio.svg" className="size-40 saturate-50" alt="Client Logo 1" />
+        <img src="/clients/unionen.svg" className="size-40 saturate-50" alt="Client Logo 1" />
         <img src="/clients/redeye.svg" className="size-40 saturate-50" alt="Client Logo 2" />
         <img src="/clients/regeringskansliet.svg" className="size-40 saturate-50" alt="Client Logo 3" />
         <img src="/clients/sida.svg" className="size-40 saturate-50" alt="Client Logo 4" />
