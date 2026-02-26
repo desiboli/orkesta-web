@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({ component: App });
 function App() {
   return (
     <main>
-      <div className="relative z-10 bg-background">
+      <div className="relative z-10 bg-background pb-4">
         <Hero />
         <ClientLogos />
         <Pricing />
@@ -21,7 +21,7 @@ function App() {
         <CallToAction />
         <AppFooter />
       </div>
-      <div className="sticky bottom-0 z-0 pb-10 pt-20">
+      <div className="sticky bottom-0 z-0 pb-10 pt-20 px-4">
         <div className="container mx-auto">
           <img src="/orkesta-mask.svg" className="w-full h-full object-cover" alt="Orkesta Logo" />
         </div>

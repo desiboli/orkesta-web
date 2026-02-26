@@ -25,7 +25,7 @@ export function AppFooter() {
             </ul>
           </nav>
 
-          <div className="mt-10 flex flex-col items-center gap-2">
+          <div className="mt-10 flex flex-col md:items-center gap-2">
             <Button size="lg">
               Boka samtal nu
             </Button>
@@ -33,20 +33,20 @@ export function AppFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-sm font-light uppercase order-last md:order-first">© {new Date().getFullYear()} Orkesta Studio. All rights reserved.</p>
-          <nav className="text-sm uppercase order-first md:order-last">
-            <ul className="flex items-center flex-wrap gap-1">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs font-light uppercase order-last md:order-first">© {new Date().getFullYear()} Orkesta Studio. All rights reserved.</p>
+          <nav className="text-xs uppercase order-first md:order-last">
+            <ul className="flex items-center flex-wrap gap-1 group">
               <li>
-                <a href="/">Integritetspolicy</a>
+                <a href="/" className="transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100!">Integritetspolicy</a>
               </li>
               <span>•</span>
               <li>
-                <a href="/">Användarvillkor</a>
+                <a href="/" className="transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100!">Användarvillkor</a>
               </li>
               <span>•</span>
               <li>
-                <a href="/">Cookies</a>
+                <a href="/" className="transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100!">Cookies</a>
               </li>
             </ul>
           </nav>
