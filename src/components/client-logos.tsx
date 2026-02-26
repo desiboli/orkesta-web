@@ -5,12 +5,12 @@ export function ClientLogos() {
     <div className="container mx-auto max-w-7xl -mt-20 px-4">
       <h2 className="text-sm text-center text-foreground/70">Företag vi har arbetat med</h2>
 
-      <Marquee className="mt-10" fade gap="80px" autoFill speed="slow" pauseOnHover>
+      <Marquee className="mt-10" fade gap="40px" autoFill speed="slow" pauseOnHover>
         <img src="/clients/assessio.svg" className="w-fit h-12 saturate-50" alt="Client Logo 1" />
         <img src="/clients/redeye.svg" className="w-fit h-12 saturate-50" alt="Client Logo 2" />
         <img src="/clients/regeringskansliet.svg" className="w-fit h-12 saturate-50" alt="Client Logo 3" />
         <img src="/clients/sida.svg" className="w-fit h-12 saturate-50" alt="Client Logo 4" />
-        <img src="/clients/svt.svg" className="w-fit h-14 saturate-50 mr-20" alt="Client Logo 5" />
+        <img src="/clients/svt.svg" className="w-fit h-14 saturate-50 mr-10" alt="Client Logo 5" />
       </Marquee>
     </div>
   )
