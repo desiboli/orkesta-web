@@ -5,6 +5,7 @@ import {
   SHADER_CONFIG_UNIVERSE,
   SHADER_CONFIG_VIOLA,
   SHADER_CONFIG_NIGHTY_NIGHT,
+  SHADER_CONFIG_INTERSTELLA,
 } from './shader'
 
 export const SERVICES = [
@@ -38,7 +39,7 @@ export const SERVICES = [
       'Vi analyserar och förbättrar er webb för fler leads, bokningar eller köp – med A/B-tester, heatmaps och UX-justeringar baserat på verklig data.',
     detail:
       'T.ex. öka konverteringsgraden med 20–50% genom bättre formulär, tydligare erbjudanden, snabbare checkout eller personifierade landningssidor.',
-    shaderProps: { ...SHADER_CONFIG_UNIVERSE },
+    shaderProps: { ...SHADER_CONFIG_INTERSTELLA },
   },
   {
     title: 'Löpande förvaltning & support',
