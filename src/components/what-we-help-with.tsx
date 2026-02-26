@@ -10,7 +10,7 @@ function ShaderGradientBlock({
 }) {
   return (
     <div className="col-span-1 order-2 md:order-0 relative h-[250px] md:h-[400px] rounded-xl overflow-hidden">
-      <ShaderGradientCanvas className="absolute inset-0">
+      <ShaderGradientCanvas lazyLoad={false} pointerEvents="none" className="absolute inset-0">
         <ShaderGradient {...shaderProps} />
       </ShaderGradientCanvas>
       {label && (

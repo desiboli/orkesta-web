@@ -39,7 +39,7 @@ export const SHADER_CONFIG_HALO = {
   uSpeed: 0.4,
   uStrength: 4,
   uTime: 0,
-  wireframe: false,
+  wireframe: true,
   enableTransition: false,
   smoothTime: 0,
   loop: 'off',
