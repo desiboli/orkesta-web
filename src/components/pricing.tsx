@@ -42,7 +42,7 @@ const pricing = [
 
 export function Pricing() {
   return (
-    <section>
+    <section id="pricing">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col gap-4 max-w-4xl mx-auto">
           <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Våra abonnemang</h2>

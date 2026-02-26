@@ -34,7 +34,7 @@ function TextBlock({ title, description, detail }: { title: string; description:
 
 export function WhatWeHelpWith() {
   return (
-    <section>
+    <section id="services">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col gap-4 max-w-4xl mx-auto">
           <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Det vi hjälper till med</h2>

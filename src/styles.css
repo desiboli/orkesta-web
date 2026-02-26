@@ -159,7 +159,7 @@
     @apply font-sans bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
   }
 
   section:not(:first-child) {
