@@ -4,11 +4,11 @@ import { MobileNav } from "./ui/mobile-nav";
 
 const navigation = [
   {
-    label: "Våra priser",
+    label: "Priser",
     href: "pricing",
   },
   {
-    label: "Våra tjänster",
+    label: "Tjänster",
     href: "services",
   },
 ]
