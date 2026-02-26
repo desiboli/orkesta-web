@@ -7,7 +7,21 @@ import { Testimonials } from "@/components/testimonials";
 import { CallToAction } from "@/components/call-to-action";
 import { AppFooter } from "@/components/app-footer";
 
-export const Route = createFileRoute("/")({ component: App });
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        name: "title",
+        content: "Orkesta - Modern webbdesign och AI utan krångel",
+      },
+      {
+        name: "description",
+        content: "Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!",
+      },
+    ],
+  }),
+  component: App
+});
 
 function App() {
   return (

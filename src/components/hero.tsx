@@ -15,18 +15,15 @@ export function Hero() {
           <Highlighter action="highlight" strokeWidth={4} color="#E4FF30" animationDuration={800} iterations={3} padding={10}>
             utan krångel
           </Highlighter>{" "}</h1>
-        <p className="text-fluid-lg text-center">
-          Transparent månadspris från 4 900 kr.
-          <br />
-          Allt ingår: design · utveckling · AI · support.
-          <br />
-          Inga timpriser. Inga överraskningar.
+        <p className="text-fluid-lg text-center max-w-4xl">
+          Transparent månadsabonnemang från 4 900 kr/mån – design, utveckling, AI-integration och support. Inga timpriser, inga överraskningar. Vi hjälper svenska små och medelstora bolag att modernisera digitalt och få resultat snabbt.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-center gap-2">
           <Button size="lg">
-            Boka samtal (30 min, kostnadsfritt)
+            Boka kostnadsfritt samtal (30 min)
           </Button>
+          <p className="text-sm font-light">Snabb leverans · Sverige-baserat · AI som faktiskt sparar tid</p>
         </div>
       </div>
     </section>
