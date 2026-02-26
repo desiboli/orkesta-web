@@ -19,6 +19,16 @@ export const Route = createRootRoute({
       {
         title: 'Orkesta - Modern webbdesign och AI utan krångel',
       },
+      // Open Graph
+      { property: 'og:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
+      { property: 'og:description', content: 'Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!' },
+      { property: 'og:image', content: '/og.png' },
+      { property: 'og:type', content: 'article' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
+      { name: 'twitter:description', content: 'Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!' },
+      { name: 'twitter:image', content: '/og.png' },
     ],
     links: [
       {
