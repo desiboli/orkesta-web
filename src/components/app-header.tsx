@@ -6,7 +6,7 @@ export function AppHeader() {
       <div className="container mx-auto max-w-7xl flex items-center justify-between px-4">
         <h1 className="text-fluid-lg font-bold font-display uppercase">Orkesta®</h1>
 
-        <Button size="lg" variant="secondary">
+        <Button variant="secondary">
           Boka samtal
         </Button>
       </div>
