@@ -127,6 +127,28 @@
   --text-fluid-4xl: clamp(2.25rem, 3vw + 1.35rem, 3.75rem);
   --text-fluid-5xl: clamp(3rem, 4vw + 1.8rem, 5rem);
   --text-fluid-6xl: clamp(3rem, 8vw + 0.6rem, 7rem);
+
+  /* Animations */
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
 }
 
 @layer base {
