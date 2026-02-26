@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export function AppFooter() {
   return (
     <footer className="mt-20 px-4">
-      <div className="container mx-auto max-w-7xl bg-[#241F1F] text-secondary-foreground p-10 rounded-2xl gap-10 flex flex-col justify-between overflow-hidden">
+      <div className="container mx-auto max-w-7xl bg-[#241F1F] text-secondary-foreground px-10 pt-20 pb-10 rounded-2xl gap-20 flex flex-col justify-between overflow-hidden">
         <div className="flex flex-col gap-2 max-w-sm">
           <h3 className="uppercase text-2xl leading-none font-bold font-display">Orkesta®</h3>
           <h4 className="text-lg font-light uppercase">Modern webb och riktig AI – transparent, utan krångel.</h4>
