@@ -22,8 +22,16 @@ export const Route = createRootRoute({
       // Open Graph
       { property: 'og:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
       { property: 'og:description', content: 'Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!' },
+
       { property: 'og:image', content: '/og.png' },
-      { property: 'og:type', content: 'article' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://orkesta-web.netlify.app/' },
+      { property: 'og:site_name', content: 'Orkesta' },
+      { property: 'og:locale', content: 'sv_SE' },
+      { property: 'og:locale:alternate', content: 'en_US' },
       // Twitter Card
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'Orkesta - Modern webbdesign och AI utan krångel' },
