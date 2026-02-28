@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { MobileNav } from "./ui/mobile-nav";
-import { LanguageSwitcher } from "./language-switcher";
 import * as m from "@/paraglide/messages";
 
 export function AppHeader() {
@@ -30,7 +29,6 @@ export function AppHeader() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <LanguageSwitcher />
             <Button variant="secondary">
               {m.nav_book_call()}
             </Button>

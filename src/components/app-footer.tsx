@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
+import { Globe } from "lucide-react";
+import { getLocale, setLocale } from "@/paraglide/runtime";
 import * as m from "@/paraglide/messages";
 
 export function AppFooter() {
@@ -37,6 +39,24 @@ export function AppFooter() {
           <p className="text-xs font-light uppercase order-last md:order-first">
             {m.footer_copyright({ year: new Date().getFullYear() })}
           </p>
+          <div className="flex items-center gap-1.5 text-xs uppercase order-2">
+            <Globe className="size-3.5" />
+            <button
+              type="button"
+              onClick={() => setLocale("sv")}
+              className={`transition-opacity duration-300 ${getLocale() === "sv" ? "opacity-100 font-medium" : "opacity-50 hover:opacity-80 cursor-pointer"}`}
+            >
+              SV
+            </button>
+            <span>/</span>
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              className={`transition-opacity duration-300 ${getLocale() === "en" ? "opacity-100 font-medium" : "opacity-50 hover:opacity-80 cursor-pointer"}`}
+            >
+              EN
+            </button>
+          </div>
           <nav className="text-xs uppercase order-first md:order-last">
             <ul className="flex items-center flex-wrap gap-1 group">
               <li>
