@@ -1,59 +1,64 @@
 import { BadgeCheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const pricing = [
-  {
-    name: "Bas",
-    price: 7900,
-    featured: false,
-    features: [
-      "Löpande säkerhet & uppdateringar",
-      "Mindre ändringar & buggfixar",
-      "Månatlig AI-rådgivning (30 min)",
-      "~10–15 timmar inkluderat/mån",
-    ],
-  },
-  {
-    name: "Standard",
-    price: 14900,
-    featured: true,
-    features: [
-      "Ny modern design & utveckling",
-      "Praktisk AI-integration (chat, automation m.m.)",
-      "Månadsvis optimering & rapporter",
-      "Prioriterad support (inom 4 timmar)",
-      "~20–40 timmar inkluderat/mån"
-    ],
-  },
-  {
-    name: "Premium",
-    price: 29900,
-    featured: false,
-    features: [
-      "Full AI-transformation & custom verktyg",
-      "Dedikerad strateg & löpande rådgivning",
-      "Avancerad analys & skalbar arkitektur",
-      "VIP-support & quarterly deep-dive",
-      "~50–80 timmar inkluderat/mån"
-    ],
-  },
-];
+import * as m from "@/paraglide/messages";
+import { getLocale } from "@/paraglide/runtime";
 
 export function Pricing() {
+  const locale = getLocale();
+  const pricing = [
+    {
+      name: m.pricing_plan_bas(),
+      price: 7900,
+      featured: false,
+      features: [
+        m.pricing_feature_1_bas(),
+        m.pricing_feature_2_bas(),
+        m.pricing_feature_3_bas(),
+        m.pricing_feature_4_bas(),
+      ],
+    },
+    {
+      name: m.pricing_plan_standard(),
+      price: 14900,
+      featured: true,
+      features: [
+        m.pricing_feature_1_standard(),
+        m.pricing_feature_2_standard(),
+        m.pricing_feature_3_standard(),
+        m.pricing_feature_4_standard(),
+        m.pricing_feature_5_standard(),
+      ],
+    },
+    {
+      name: m.pricing_plan_premium(),
+      price: 29900,
+      featured: false,
+      features: [
+        m.pricing_feature_1_premium(),
+        m.pricing_feature_2_premium(),
+        m.pricing_feature_3_premium(),
+        m.pricing_feature_4_premium(),
+        m.pricing_feature_5_premium(),
+      ],
+    },
+  ];
+
   return (
     <section id="pricing">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col gap-4 max-w-4xl mx-auto">
-          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">Våra abonnemang</h2>
-          <h3 className="text-fluid-xl text-center leading-tight">Välj rätt nivå för er webbdesign, AI-integration eller löpande optimering. Allt ingår i ett fast månadspris – ingen timrapportering. Perfekt för bolag som vill ha modern webbutveckling utan dolda kostnader.</h3>
+          <h2 className="text-fluid-4xl font-bold font-display text-center leading-none">{m.pricing_heading()}</h2>
+          <h3 className="text-fluid-xl text-center leading-tight">{m.pricing_subheading()}</h3>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 md:mt-20">
           {pricing.map((item) => (
             <div key={item.name} className={cn("bg-card/30 rounded-xl p-10 flex flex-col justify-between", item.featured && "bg-secondary text-secondary-foreground")}>
               <h3 className={cn("text-fluid-lg", item.featured && "text-fluid-2xl")}>{item.name}</h3>
-              <p className={cn("text-fluid-2xl font-bold", item.featured && "text-fluid-3xl")}>{Intl.NumberFormat('sv-SE').format(item.price)} kr/mån</p>
+              <p className={cn("text-fluid-2xl font-bold", item.featured && "text-fluid-3xl")}>
+                {Intl.NumberFormat(locale === "sv" ? "sv-SE" : "en-GB").format(item.price)} kr/mån
+              </p>
 
               <div className="flex flex-col gap-2 mt-10">
                 {item.features.map((feature) => (
@@ -64,15 +69,14 @@ export function Pricing() {
                 ))}
               </div>
 
-
               <Button variant={item.featured ? "default" : "secondary"} size={item.featured ? "lg" : "default"} className="w-full mt-20">
-                Kom igång
+                {m.pricing_cta()}
               </Button>
             </div>
           ))}
         </div>
 
-        <p className="text-sm font-light text-center mt-10">Inga timrapporter. Inga extrakostnader. Byte eller uppsägning när du vill efter första månaden.</p>
+        <p className="text-sm font-light text-center mt-10">{m.pricing_footer()}</p>
       </div>
     </section>
   )

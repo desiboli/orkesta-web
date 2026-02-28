@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { Link } from "@tanstack/react-router";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import * as m from "@/paraglide/messages";
 
 export interface MobileNavProps {
   items: { href: string; label: string }[];
@@ -40,10 +42,10 @@ export function MobileNav({ items, className }: MobileNavProps) {
               )}
             />
           </div>
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">{m.nav_toggle_menu()}</span>
         </div>
         <span className="flex h-8 items-center text-lg font-medium leading-none">
-          Meny
+          {m.nav_menu()}
         </span>
       </PopoverTrigger>
       <PopoverContent
@@ -56,7 +58,7 @@ export function MobileNav({ items, className }: MobileNavProps) {
         <div className="flex flex-col gap-12 overflow-auto px-6 py-6 h-full justify-between">
           <div className="flex flex-col gap-4">
             <div className="text-sm font-medium text-muted-foreground">
-              Meny
+              {m.nav_menu()}
             </div>
             <div className="flex flex-col gap-3">
               {items.map((item) => (
@@ -74,10 +76,11 @@ export function MobileNav({ items, className }: MobileNavProps) {
           </div>
 
           <div className="mt-10 flex flex-col items-center gap-2">
+            <LanguageSwitcher />
             <Button size="lg" className="w-full">
-              Boka samtal nu
+              {m.nav_book_call_now()}
             </Button>
-            <span className="text-xs font-light">Vi hör av oss inom 24 timmar</span>
+            <span className="text-xs font-light">{m.cta_footer()}</span>
           </div>
         </div>
       </PopoverContent>

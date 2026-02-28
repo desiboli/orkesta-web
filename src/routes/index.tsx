@@ -6,18 +6,13 @@ import { WhatWeHelpWith } from "@/components/what-we-help-with";
 import { Testimonials } from "@/components/testimonials";
 import { CallToAction } from "@/components/call-to-action";
 import { AppFooter } from "@/components/app-footer";
+import * as m from "@/paraglide/messages";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      {
-        name: "title",
-        content: "Orkesta - Modern webbdesign och AI utan krångel",
-      },
-      {
-        name: "description",
-        content: "Behöver ni modern webbdesign, AI-integration och transparent prissättning? ORKESTA är webbyrån för svenska bolag – månadsabonnemang från 4 900 kr. Inga timpriser, snabb leverans. Boka samtal idag!",
-      },
+      { name: "title", content: m.meta_title() },
+      { name: "description", content: m.meta_description() },
     ],
   }),
   component: App
