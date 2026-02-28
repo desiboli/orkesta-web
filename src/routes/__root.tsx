@@ -39,9 +39,9 @@ export const Route = createRootRoute({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-apple.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
         { rel: 'icon', href: '/favicon.ico' },
-        { rel: 'alternate', hreflang: 'sv', href: `${SITE_URL}${localizeHref('/', { locale: 'sv' })}` },
-        { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}${localizeHref('/', { locale: 'en' })}` },
-        { rel: 'alternate', hreflang: 'x-default', href: SITE_URL },
+        { rel: 'alternate', hrefLang: 'sv', href: `${SITE_URL}${localizeHref('/', { locale: 'sv' })}` },
+        { rel: 'alternate', hrefLang: 'en', href: `${SITE_URL}${localizeHref('/', { locale: 'en' })}` },
+        { rel: 'alternate', hrefLang: 'x-default', href: SITE_URL },
       ],
     }
   },
