@@ -12,7 +12,7 @@ export function AppHeader() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-background/70 backdrop-blur-sm border-b border-border/90">
       <div className="container mx-auto max-w-7xl flex items-center justify-between px-4">
-        <Link to="/" className="text-fluid-lg font-bold font-display uppercase">Orkesta®</Link>
+        <Link to="/" className="text-fluid-lg font-bold font-display uppercase">Orkesto®</Link>
 
         <MobileNav items={navItems} className="md:hidden" />
         <div className="items-center gap-4 hidden md:flex">

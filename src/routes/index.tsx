@@ -32,7 +32,7 @@ function App() {
       </div>
       <div className="sticky bottom-0 z-0 pb-10 pt-20 px-4">
         <div className="container mx-auto">
-          <img src="/orkesta-mask.svg" className="w-full h-full object-cover" alt="Orkesta Logo" />
+          <img src="/orkesto-mask.svg" className="w-full h-full object-cover" alt="Orkesto Logo" />
         </div>
       </div>
     </main>

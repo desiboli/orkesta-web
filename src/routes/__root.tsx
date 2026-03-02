@@ -8,7 +8,7 @@ import { localizeHref } from '@/paraglide/runtime'
 
 import appCss from '../styles.css?url'
 
-const SITE_URL = import.meta.env.PUBLIC_SITE_URL ?? 'https://orkesta.se'
+const SITE_URL = import.meta.env.PUBLIC_SITE_URL ?? 'https://orkesto.se'
 
 export const Route = createRootRoute({
   head: () => {
@@ -26,7 +26,7 @@ export const Route = createRootRoute({
         { property: 'og:image:height', content: '630' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: SITE_URL },
-        { property: 'og:site_name', content: 'Orkesta' },
+        { property: 'og:site_name', content: 'Orkesto' },
         { property: 'og:locale', content: getLocale() === 'sv' ? 'sv_SE' : 'en_US' },
         { property: 'og:locale:alternate', content: getLocale() === 'sv' ? 'en_US' : 'sv_SE' },
         { name: 'twitter:card', content: 'summary_large_image' },
