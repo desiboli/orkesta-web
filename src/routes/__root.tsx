@@ -17,8 +17,8 @@ function MixpanelInit() {
     mixpanel.init(import.meta.env.PUBLIC_MIXPANEL_TOKEN, {
       api_host: 'https://api-eu.mixpanel.com',
       debug: import.meta.env.DEV,
-      autocapture: false,
-      record_sessions_percent: 0,
+      autocapture: true,
+      record_sessions_percent: 100,
       loaded: (mp) => {
         mp.track('mixpanel_boot_ok')
       },
