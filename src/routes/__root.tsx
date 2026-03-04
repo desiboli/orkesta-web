@@ -14,18 +14,15 @@ const SITE_URL = import.meta.env.PUBLIC_SITE_URL ?? 'https://orkesto.se'
 
 function MixpanelInit() {
   useEffect(() => {
-    // avoid double init in dev strict mode / rerenders
-    if ((window as any).__mixpanel_initialized) return
-      ; (window as any).__mixpanel_initialized = true
-
     mixpanel.init(import.meta.env.PUBLIC_MIXPANEL_TOKEN, {
-      autocapture: true,
-      record_sessions_percent: 100,
       api_host: 'https://api-eu.mixpanel.com',
       debug: import.meta.env.DEV,
+      autocapture: false,
+      record_sessions_percent: 0,
+      loaded: (mp) => {
+        mp.track('mixpanel_boot_ok')
+      },
     })
-
-    mixpanel.track('mixpanel_boot_ok')
   }, [])
 
   return null
@@ -75,7 +72,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang={getLocale()}>
       <head>
         <HeadContent />
-        <MixpanelInit />
       </head>
       <body>
         <AppHeader />
@@ -91,6 +87,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             },
           ]}
         />
+        <MixpanelInit />
         <Scripts />
       </body>
     </html>
