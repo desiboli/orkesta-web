@@ -28,7 +28,7 @@ export function Hero() {
           <Button size="lg">
             {m.hero_cta()}
           </Button>
-          <p className="text-sm font-light">{m.hero_subtitle()}</p>
+          <p className="text-sm font-light text-center">{m.hero_subtitle()}</p>
         </div>
       </div>
 
