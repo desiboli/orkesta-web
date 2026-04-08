@@ -15,7 +15,6 @@ export function Pricing() {
         m.pricing_feature_1_bas(),
         m.pricing_feature_2_bas(),
         m.pricing_feature_3_bas(),
-        m.pricing_feature_4_bas(),
       ],
     },
     {
@@ -27,7 +26,6 @@ export function Pricing() {
         m.pricing_feature_2_standard(),
         m.pricing_feature_3_standard(),
         m.pricing_feature_4_standard(),
-        m.pricing_feature_5_standard(),
       ],
     },
     {
@@ -39,7 +37,6 @@ export function Pricing() {
         m.pricing_feature_2_premium(),
         m.pricing_feature_3_premium(),
         m.pricing_feature_4_premium(),
-        m.pricing_feature_5_premium(),
       ],
     },
   ];
