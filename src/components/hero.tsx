@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Highlighter } from "./ui/highlighter";
+import { ClientLogos } from "./client-logos";
 import * as m from "@/paraglide/messages";
 
 export function Hero() {
   return (
-    <section className="bg-background h-screen flex items-center justify-center max-h-svh">
-      <div className="max-w-7xl flex flex-col items-center justify-center gap-6 container mx-auto px-4">
+    <section className="bg-background h-screen flex flex-col items-center justify-center max-h-svh">
+      <div className="max-w-7xl flex flex-col items-center justify-center gap-6 container mx-auto px-4 flex-1">
         <h1 className="text-fluid-6xl uppercase leading-none tracking-tight font-bold font-display text-center">
           {m.hero_title_1()}{" "}
           <Highlighter action="highlight" strokeWidth={4} color="#FF9800" animationDuration={800} iterations={3} padding={10}>
@@ -30,6 +31,9 @@ export function Hero() {
           <p className="text-sm font-light">{m.hero_subtitle()}</p>
         </div>
       </div>
+
+      <ClientLogos />
+
     </section>
   )
 }

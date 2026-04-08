@@ -3,7 +3,7 @@ import * as m from "@/paraglide/messages";
 
 export function ClientLogos() {
   return (
-    <div className="container mx-auto max-w-7xl -mt-20 px-4">
+    <div className="container mx-auto max-w-7xl px-4 mt-auto">
       <h2 className="text-sm text-center text-foreground/70">{m.client_logos_heading()}</h2>
 
       <Marquee speed="slow" gap="80px" fade autoFill pauseOnHover>
