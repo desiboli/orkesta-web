@@ -1,19 +1,14 @@
-import { ShaderGradient, ShaderGradientCanvas } from "@shadergradient/react";
 import { getServices } from "@/constants/services";
 import * as m from "@/paraglide/messages";
 
-function ShaderGradientBlock({
-  shaderProps,
-  label,
-}: {
-  shaderProps: Record<string, string | number | boolean>;
-  label?: string;
-}) {
+function ImageBlock({ src, label }: { src: string; label?: string }) {
   return (
     <div className="col-span-1 order-2 md:order-0 relative h-[250px] md:h-[400px] rounded-xl overflow-hidden">
-      <ShaderGradientCanvas lazyLoad={false} pointerEvents="none" className="absolute inset-0">
-        <ShaderGradient {...shaderProps} />
-      </ShaderGradientCanvas>
+      <img
+        src={src}
+        alt={label ?? ""}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       {label && (
         <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
           <span className="text-white text-shadow-lg text-2xl font-bold">{label}</span>
@@ -47,11 +42,11 @@ export function WhatWeHelpWith() {
               {index % 2 === 0 ? (
                 <>
                   <TextBlock title={service.title} description={service.description} detail={service.detail} />
-                  <ShaderGradientBlock shaderProps={service.shaderProps} label={service.title} />
+                  <ImageBlock src={service.image} label={service.title} />
                 </>
               ) : (
                 <>
-                  <ShaderGradientBlock shaderProps={service.shaderProps} label={service.title} />
+                  <ImageBlock src={service.image} label={service.title} />
                   <TextBlock title={service.title} description={service.description} detail={service.detail} />
                 </>
               )}

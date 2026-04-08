@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/hero";
-import { ClientLogos } from "@/components/client-logos";
 import { Pricing } from "@/components/pricing";
 import { WhatWeHelpWith } from "@/components/what-we-help-with";
-import { Testimonials } from "@/components/testimonials";
 import { CallToAction } from "@/components/call-to-action";
 import { AppFooter } from "@/components/app-footer";
 import * as m from "@/paraglide/messages";
@@ -25,7 +23,7 @@ function App() {
         <Hero />
         <Pricing />
         <WhatWeHelpWith />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CallToAction />
         <AppFooter />
       </div>
