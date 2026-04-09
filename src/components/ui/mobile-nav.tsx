@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "@tanstack/react-router";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -6,12 +8,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { Link } from "@tanstack/react-router";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import * as m from "@/paraglide/messages";
 
+export type MobileNavItem =
+  | { label: string; to: "/"; hash: string }
+  | { label: string; to: "/contact" };
+
 export interface MobileNavProps {
-  items: { href: string; label: string }[];
+  items: Array<MobileNavItem>;
   className?: string;
 }
 
@@ -63,9 +67,9 @@ export function MobileNav({ items, className }: MobileNavProps) {
             <div className="flex flex-col gap-3">
               {items.map((item) => (
                 <Link
-                  key={item.href}
-                  to={"/"}
-                  hash={item.href}
+                  key={`${item.to}-${"hash" in item ? item.hash : ""}`}
+                  to={item.to}
+                  {...("hash" in item ? { hash: item.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-2 text-2xl font-medium transition-opacity duration-300 hover:opacity-70"
                 >

@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { MobileNav } from "./ui/mobile-nav";
+import { Button } from "@/components/ui/button";
 import * as m from "@/paraglide/messages";
 
 export function AppHeader() {
   const navItems = [
-    { label: m.nav_pricing(), href: "pricing" },
-    { label: m.nav_services(), href: "services" },
+    { label: m.nav_pricing(), to: "/" as const, hash: "pricing" as const },
+    { label: m.nav_services(), to: "/" as const, hash: "services" as const },
+    { label: m.nav_contact(), to: "/contact" as const },
   ];
 
   return (
@@ -19,8 +20,12 @@ export function AppHeader() {
           <nav>
             <ul className="flex items-center gap-4 group">
               {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link to={"/"} hash={item.href} className="transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100!">
+                <li key={`${item.to}-${"hash" in item ? item.hash : ""}`}>
+                  <Link
+                    to={item.to}
+                    {...("hash" in item ? { hash: item.hash } : {})}
+                    className="transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100!"
+                  >
                     {item.label}
                   </Link>
                 </li>
