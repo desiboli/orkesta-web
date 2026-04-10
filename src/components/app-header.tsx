@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { MobileNav } from "./ui/mobile-nav";
+import { Button } from "@/components/ui/button";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import * as m from "@/paraglide/messages";
 
 export function AppHeader() {
+  useCalEmbed()
+
   const navItems = [
     { label: m.nav_pricing(), href: "pricing" },
     { label: m.nav_services(), href: "services" },
@@ -29,7 +32,12 @@ export function AppHeader() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button variant="secondary">
+            <Button
+              variant="secondary"
+              data-cal-namespace="quickchat"
+              data-cal-link="team/orkesto/quickchat"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
               {m.nav_book_call()}
             </Button>
           </div>

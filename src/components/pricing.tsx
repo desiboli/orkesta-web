@@ -1,10 +1,12 @@
 import { BadgeCheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import * as m from "@/paraglide/messages";
 import { getLocale } from "@/paraglide/runtime";
 
 export function Pricing() {
+  useCalEmbed()
   const locale = getLocale();
   const pricing = [
     {
@@ -66,7 +68,14 @@ export function Pricing() {
                 ))}
               </div>
 
-              <Button variant={item.featured ? "default" : "secondary"} size={item.featured ? "lg" : "default"} className="w-full mt-20">
+              <Button
+                variant={item.featured ? "default" : "secondary"}
+                size={item.featured ? "lg" : "default"}
+                className="w-full mt-20"
+                data-cal-namespace="quickchat"
+                data-cal-link="team/orkesto/quickchat"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
                 {m.pricing_cta()}
               </Button>
             </div>

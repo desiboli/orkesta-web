@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -6,7 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { Link } from "@tanstack/react-router";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import * as m from "@/paraglide/messages";
 
@@ -16,6 +17,7 @@ export interface MobileNavProps {
 }
 
 export function MobileNav({ items, className }: MobileNavProps) {
+  useCalEmbed()
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -77,7 +79,13 @@ export function MobileNav({ items, className }: MobileNavProps) {
 
           <div className="mt-10 flex flex-col items-center gap-2">
             <LanguageSwitcher />
-            <Button size="lg" className="w-full">
+            <Button
+              size="lg"
+              className="w-full"
+              data-cal-namespace="quickchat"
+              data-cal-link="team/orkesto/quickchat"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
               {m.nav_book_call_now()}
             </Button>
             <span className="text-xs font-light">{m.cta_footer()}</span>

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import * as m from "@/paraglide/messages";
 
 export function CallToAction() {
+  useCalEmbed()
+
   return (
     <section>
       <div className="container mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center px-4 md:gap-10">
@@ -11,7 +14,12 @@ export function CallToAction() {
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-2">
-          <Button size="lg">
+          <Button
+            size="lg"
+            data-cal-namespace="quickchat"
+            data-cal-link="team/orkesto/quickchat"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
             {m.cta_button()}
           </Button>
           <span className="text-sm font-light">{m.cta_footer()}</span>

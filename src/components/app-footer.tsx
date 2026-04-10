@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import { getLocale, setLocale } from "@/paraglide/runtime";
 import * as m from "@/paraglide/messages";
 
 export function AppFooter() {
+  useCalEmbed()
+
   return (
     <footer className="mt-20 px-4">
       <div className="container mx-auto max-w-7xl bg-[#241F1F] text-secondary-foreground px-10 pt-20 pb-10 rounded-2xl gap-20 flex flex-col justify-between overflow-hidden">
@@ -28,7 +31,12 @@ export function AppFooter() {
           </nav>
 
           <div className="mt-10 flex flex-col md:items-center gap-2">
-            <Button size="lg">
+            <Button
+              size="lg"
+              data-cal-namespace="quickchat"
+              data-cal-link="team/orkesto/quickchat"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
               {m.nav_book_call_now()}
             </Button>
             <span className="text-xs font-light">{m.cta_footer()}</span>

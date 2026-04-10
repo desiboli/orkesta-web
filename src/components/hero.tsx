@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
 import { Highlighter } from "./ui/highlighter";
 import { ClientLogos } from "./client-logos";
+import { Button } from "@/components/ui/button";
+import { useCalEmbed } from "@/hooks/use-cal-embed";
 import * as m from "@/paraglide/messages";
 
 export function Hero() {
+  useCalEmbed()
+
   return (
     <section className="bg-background h-screen flex flex-col items-center justify-center max-h-svh">
       <div className="max-w-7xl flex flex-col items-center justify-center gap-6 container mx-auto px-4 flex-1">
@@ -25,7 +28,12 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-2">
-          <Button size="lg">
+          <Button
+            size="lg"
+            data-cal-namespace="quickchat"
+            data-cal-link="team/orkesto/quickchat"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
             {m.hero_cta()}
           </Button>
           <p className="text-sm font-light text-center">{m.hero_subtitle()}</p>
