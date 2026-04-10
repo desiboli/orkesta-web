@@ -153,7 +153,7 @@ export function ContactForm() {
         });
       } catch {
         setFormError(m.contact_error_send_failed());
-        throw new Error("Contact form submission failed");
+        return;
       }
 
       if (!result.ok) {
@@ -170,7 +170,7 @@ export function ContactForm() {
         } else {
           setFormError(messageForServerCode(result.code));
         }
-        throw new Error("Contact form submission failed");
+        return;
       }
 
       setSubmitSuccess(true);

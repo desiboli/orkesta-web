@@ -62,11 +62,12 @@ export const submitContactForm = createServerFn({ method: 'POST' })
 
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
+      console.error('[contact] RESEND_API_KEY is not set')
       return { ok: false, code: 'not_configured' }
     }
 
     const from =
-      process.env.RESEND_FROM_EMAIL ?? 'Orkesto Contact <onboarding@resend.dev>'
+      process.env.RESEND_FROM_EMAIL || 'Orkesto Contact <onboarding@resend.dev>'
 
     const resend = new Resend(apiKey)
 
@@ -104,6 +105,7 @@ export const submitContactForm = createServerFn({ method: 'POST' })
     })
 
     if (error) {
+      console.error('[contact] Resend error:', error)
       return {
         ok: false,
         code: 'send_failed',
