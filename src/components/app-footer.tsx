@@ -21,7 +21,7 @@ export function AppFooter() {
             <h5 className="text-2xl font-medium mb-4">{m.footer_contact()}</h5>
             <ul className="flex flex-col gap-2 font-light">
               <li>
-                <a href="mailto:info@orkesto.se">hello@orkesto.se</a>
+                <a href="mailto:adam@orkesto.se">adam@orkesto.se</a>
               </li>
               <li>
                 <a href="tel:+46701234567">+46 (0)73 698 67 52</a>
