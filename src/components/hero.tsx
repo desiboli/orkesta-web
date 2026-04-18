@@ -8,7 +8,7 @@ export function Hero() {
   useCalEmbed()
 
   return (
-    <section className="bg-background h-screen flex flex-col items-center justify-center max-h-svh">
+    <section className="bg-background min-h-screen flex flex-col items-center justify-center pt-28">
       <div className="max-w-7xl flex flex-col items-center justify-center gap-6 container mx-auto px-4 flex-1">
         <h1 className="text-fluid-6xl uppercase leading-none tracking-tight font-bold font-display text-center">
           {m.hero_title_1()}{" "}

@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 function App() {
   return (
     <main>
-      <div className="relative z-10 bg-background pt-16">
+      <div className="relative z-10 bg-background">
         <Hero />
         <Pricing />
         <WhatWeHelpWith />
